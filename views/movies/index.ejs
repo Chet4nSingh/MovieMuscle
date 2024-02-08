@@ -1,0 +1,18 @@
+<%- layout('/layouts/boilerplate') %>
+    <h1 class="text-center">All Movies</h1>
+    <div class="text-dark d-flex flex-wrap justify-content-center">
+        <% for (let movie of movies) { %>
+            <div class="card m-2 border border-dark" style="width: 20rem;">
+                <img src="<%= movie.image %>" class="card-img-top" style="height: 12rem" alt="<%= movie.name %> poster">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= movie.name %>
+                    </h5>
+                    <p class="card-text">
+                        <%= movie.description %>
+                    </p>
+                    <a href="#" class="btn btn-danger">View Details</a>
+                </div>
+            </div>
+            <% } %>
+    </div>
